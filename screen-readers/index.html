@@ -33,27 +33,27 @@
       <div class="col-md-10 col-md-offset-1">
         <h1>Screen Reader Example</h1>
 
-        <img alt="cat" src="../images/pic.jpg" />
+        <img src="../images/pic.jpg" alt="Kittens" tabindex="0"/>
 
         <h2>Sign up for our mailing list!</h2>
 
         <form style="margin-bottom: 150px;">
-          <p>Email Address:</p>
-          <input class="form-control" type="text" />
+          <label for="email-address">Email Address:</label>
+          <input class="form-control" id="email-address" type="text" />
 
-          <p>First and Last name:</p>
-          <input class="form-control" type="text" />
+          <label for="first-and-last-name">First and Last name:</label>
+          <input class="form-control" id="first-and-last-name" type="text" />
 
-          <p>How often would you like to recieve email from us?</p>
-          <select class="form-control">
+          <label for="email-frequency">How often would you like to recieve email from us?</label>
+          <select id="email-frequency" class="form-control">
             <option>Daily</option>
             <option>Weekly</option>
             <option>Monthly</option>
             <option>Never</option>
           </select>
 
-          <p>Security: What is in the above picture?</p>
-          <input class="form-control" type="text" />
+          <label for="captcha">Security: What is in the above picture?</label>
+          <input id="captcha" class="form-control" type="text" />
         </form>
 
         <p>Your task is to make it so the entire form can be filled out with only the use of a screen reader.</p>

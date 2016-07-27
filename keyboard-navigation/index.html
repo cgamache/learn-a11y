@@ -123,8 +123,8 @@ embed,
                 <option>Black</option>
               </select>
               <input type="checkbox"> Remember me
-              <div class="btn btn-default">Cancel</div>
-              <div class="btn btn-primary">Submit</div>
+              <div class="btn btn-default reset-button" role="button" tabindex="0" onClick="$('main#form form').reset();">Cancel</div>
+              <div class="btn btn-primary submit-button" role="button" tabindex="0" onClick="$('main#form form').submit();">Submit</div>
             </fieldset>
           </form>
         </main>
@@ -133,5 +133,20 @@ embed,
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/focus.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function docReady() {
+          $('main#form .submit-button').bind('keydown', function keyDownEvent(event) {
+             if (event.keyCode === 32) {
+                  $('main#form form').submit();
+              }
+          });
+          $('main#form .reset-button').bind('keydown', function keyDownEvent(event) {
+             if (event.keyCode === 32) {
+                console.log('reset');
+                  $('main#form form').reset();
+              }
+          });
+      });
+    </script>
   </body>
 </html>
